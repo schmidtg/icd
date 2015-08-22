@@ -3,44 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>ICD 10 Codes</title>
-  <link href="../javascripts/select2/css/select2.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/javascripts/select2/css/select2.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="assets/stylesheets/main.css" rel="stylesheet" type="text/css">
   <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="../javascripts/select2/js/select2.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-    $("#codes").select2({
-      matcher: function(params, text) {
-        // Always return the object if there is nothing to compare
-        if ($.trim(params.term) === '') {
-          return text;
-        }
-
-        // Build Regex String
-        var matchTerm = '.*';
-
-        // Split all the search terms
-        var terms = params.term.split(" ");
-
-        for(var i = 0; i < terms.length; i++) {
-            matchTerm += '(?=.*' + terms[i] + '.*)';
-        };
-
-        matchTerm += '.*';
-
-        // Convert to Regex
-        // => /.*(?=.*TERM1.*)(?=.*TERM2.*).*/
-        var matchRegex = new RegExp(matchTerm.toUpperCase());
-
-        if (text.text.toUpperCase().match(matchRegex)) {
-          return text;
-        }
-
-        return null;
-      }
-    });
-  });
-  </script>
-<link href="styles.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="assets/javascripts/select2/js/select2.js"></script>
+  <script type="text/javascript" src="assets/javascripts/main.js"></script>
 </head>
 <body>
 
