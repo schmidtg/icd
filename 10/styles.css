@@ -1,0 +1,27 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+.codes {
+  padding: 40px;
+}
+
+@media print {
+  .print,
+  .select2-selection__choice__remove {
+    display: none;
+  }
+  .select2-selection__rendered li {
+    list-style: none;
+  }
+  .select2-container--default {
+    border: none;
+  }
+}
+
