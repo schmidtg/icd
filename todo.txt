@@ -1,0 +1,13 @@
+* Larger font when printing to allow for writing (larger and proper leading)
+* Title: ICD 10 Diagnostic Codes
+* Print on top-half of sheet
+* Put codes in first column
+
+* Max 10 codes
+
+* Add the CPT codes to the bottom of the page to be able to circle separately
+* Provide name/contact at bottom of page
+Anna M Mirski, Primary Medical Care, (631) 648-9660
+* Patient name, DOB, type of insurance
+
+* Provide signature, date, and return appointment line
