@@ -11,3 +11,5 @@ Anna M Mirski, Primary Medical Care, (631) 648-9660
 * Patient name, DOB, type of insurance
 
 * Provide signature, date, and return appointment line
+
+* Include 'Other' box for codes not listed

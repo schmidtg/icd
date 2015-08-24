@@ -1,23 +1,50 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  text-align: center;
+  font-size: 16px;
+  padding: 10px;
 }
 
-.codes {
-  padding: 40px;
+.print {
+  margin: 10px 0;
+}
+
+.codes select {
+  width: 40%;
+}
+
+.heading-physician {
+  font-family: Georgia, Times New Roman, serif;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.heading-icd10 {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 @media print {
+  body {
+    line-height: 1.5;
+  }
   .print,
   .select2-selection__choice__remove {
     display: none;
   }
+  .select2-selection__rendered {
+    padding: 0;
+  }
   .select2-selection__rendered li {
     list-style: none;
   }
+  .select2-search__field,
+  .select[multiple],
   .select2-container--default {
     border: none;
+  }
+  .codes {
+    padding: 0;
+    width: auto;
   }
 }
 
