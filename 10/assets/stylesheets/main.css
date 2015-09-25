@@ -1,7 +1,17 @@
 body {
+  padding: 0;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
-  padding: 10px;
+}
+
+.container {
+  background: url('../images/superbill.jpg') no-repeat center;
+  background-position: top center;
+  background-size: 97%;
+  width: 1275px;
+  height: 1650px;
+  padding: 20px;
 }
 
 .button-print {
@@ -49,22 +59,13 @@ body {
   width: 40%;
 }
 
-.heading-physician {
-  font-family: Georgia, Times New Roman, serif;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.heading-icd10 {
-  font-size: 18px;
-  font-weight: bold;
-}
-
 @media print {
   body {
     line-height: 1.5;
-    padding-left: 1in;
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .container {
+    padding: 0;
   }
   .button-print,
   .select2-selection__choice__remove {
@@ -81,9 +82,23 @@ body {
   .select2-container--default {
     border: none;
   }
+  .select2-search {
+    display: none;
+  }
   .codes {
     padding: 0;
+    padding-left: 105px;
+    padding-top: 205px;
     width: auto;
+    height: 175px;
+
+   -webkit-column-count: 2;
+      -moz-column-count: 2;
+           column-count: 2;
+
+   -webkit-column-gap: 20px;
+      -moz-column-gap: 20px;
+           column-gap: 20px;
   }
 }
 
