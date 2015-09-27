@@ -1,4 +1,27 @@
 $(document).ready(function() {
+  $('.button-print').on('click', function() {
+    var $selectedChoices = $('.select2-selection__choice');
+    var sizeSelected = $selectedChoices.size();
+    var split = sizeSelected / 2;
+
+    // clear col2
+    $('.col1of3').html('<ul></ul>');
+    $('.col2of3').html('<ul></ul>');
+
+    $selectedChoices.each(function(index) {
+      var $text = $(this).clone();
+      if (index < split) {
+        var newElement = $('<li>').append($text.attr('title'));
+        $(newElement).appendTo('.col1of3 ul');
+      } else {
+        var newElement = $('<li>').append($text.attr('title'));
+        $(newElement).appendTo('.col2of3 ul');
+      }
+    });
+
+    window.print();
+  });
+
   $("#codes").select2({
     matcher: function(params, text) {
       // Always return the object if there is nothing to compare

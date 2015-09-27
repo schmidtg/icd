@@ -51,18 +51,36 @@ body {
   background-color:#1e62d0;
 }
 .button-print:active {
-  position:relative;
-  top:1px;
+  position: relative;
+  top: 1px;
 }
 
-.codes select {
-  width: 40%;
+.codes {
+  display: block;
+}
+.column {
+  display: none;
+  float: left;
+}
+.col1of3 {
+  width: 30%;
+  margin-right: 30px;
+}
+.col2of3 {
+  width: 30%;
+  margin-right: 30px;
 }
 
 @media print {
   body {
     line-height: 1.5;
     font-size: 14px;
+  }
+  .codes {
+    display: none;
+  }
+  .column {
+    display: block;
   }
   .container {
     padding: 0;
@@ -74,6 +92,7 @@ body {
   .select2-selection__rendered {
     padding: 0;
   }
+  li,
   .select2-selection__rendered li {
     list-style: none;
   }
@@ -85,20 +104,12 @@ body {
   .select2-search {
     display: none;
   }
-  .codes {
+  .row {
     padding: 0;
     padding-left: 105px;
     padding-top: 205px;
     width: auto;
     height: 175px;
-
-   -webkit-column-count: 2;
-      -moz-column-count: 2;
-           column-count: 2;
-
-   -webkit-column-gap: 20px;
-      -moz-column-gap: 20px;
-           column-gap: 20px;
   }
 }
 
