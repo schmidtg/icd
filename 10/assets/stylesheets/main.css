@@ -70,6 +70,10 @@ body {
   width: 30%;
   margin-right: 30px;
 }
+.col3of3 {
+  width: 30%;
+  margin-right: 30px;
+}
 
 @media print {
   body {
@@ -110,6 +114,10 @@ body {
     padding-top: 205px;
     width: auto;
     height: 175px;
+  }
+  .row ul {
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 
