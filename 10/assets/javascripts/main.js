@@ -2,23 +2,19 @@ $(document).ready(function() {
   $('.button-print').on('click', function() {
     var $selectedChoices = $('.select2-selection__choice');
     var sizeSelected = $selectedChoices.size();
-    var split1 = sizeSelected / 3;
-    var split2 = split1 * 2;
+    var split = sizeSelected / 2;
 
     // clear col2
-    $('.col1of3').html('<ul></ul>');
-    $('.col2of3').html('<ul></ul>');
-    $('.col3of3').html('<ul></ul>');
+    $('.col1of2').html('<ul></ul>');
+    $('.col2of2').html('<ul></ul>');
 
     $selectedChoices.each(function(index) {
       var $text = $(this).clone();
       var newElement = $('<li>').append($text.attr('title'));
-      if (index < split1) {
-        $(newElement).appendTo('.col1of3 ul');
-      } else if (index >= split1 && index < split2) {
-        $(newElement).appendTo('.col2of3 ul');
+      if (index < split) {
+        $(newElement).appendTo('.col1of2 ul');
       } else {
-        $(newElement).appendTo('.col3of3 ul');
+        $(newElement).appendTo('.col2of2 ul');
       }
     });
 
